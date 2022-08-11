@@ -2,7 +2,7 @@
 
 ## 8.4 
 ### Things need to do
-- Read materials
+- Read literatures 
     - Qi Liu, Runze Wu, Enhong Chen, Guandong Xu, Yu Su, Zhigang Chen, and Guoping Hu. Fuzzy cognitive diagnosis for modelling examinee performance. Acm Transactions on Intelligent Systems and Technology, 9(4):1–26, 2018.
 
     - Ekaterina Vasilyeva, Seppo Puuronen, Mykola Pechenizkiy, and Pekka Rasanen. Feedback adaptation in web-based learning systems. International Journal of Continuing Engineering Education and Life Long Learning, 17(4/5):337, 2007. 
