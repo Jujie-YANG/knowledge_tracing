@@ -15,7 +15,7 @@
     - https://github.com/arghosh/AKT (Context-Aware Attentive Knowledge Tracing)
     - https://github.com/Vinci-hp/pretrainKT (SPAKT: A Self-Supervised Pre-TrAining Method for Knowledge Tracing)
     - And code above which is about SAINT and SAINT+
-    
+
 ## 8.4 
 ### Things to do
 - Read literatures 
@@ -25,7 +25,7 @@
  
     - Meng Wang, Zong Kai Yang, San Ya Liu, Hercy N H Cheng, and Zhi Liu. Using feedback to improve learning: Differentiating between correct and erroneous examples. In International Symposium on Educational Technology, 2015.
 
-    - [A Survey of Knowledge Tracing](https://arxiv.org/pdf/2105.15106.pdf)
+    - [A Survey of Knowledge Tracing](https://arxiv.org/pdf/2105.15106.pdf): 4.4 Considering Forgetting after Learning
 
 - Know about some techniques
     - [Decision Transformer](https://proceedings.neurips.cc/paper/2021/file/7f489f642a0ddb10272b5c31057f0663-Paper.pdf)
