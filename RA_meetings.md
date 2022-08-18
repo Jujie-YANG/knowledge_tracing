@@ -1,4 +1,4 @@
-# Logs of meetings with Zhaoxing Li
+# Logs of meetings with Zhaoxing
 ## 8.18 
 ### Things to do
 - Read literatures 
