@@ -1,5 +1,8 @@
 # Logs of meetings with Zhaoxing
 ## 9.1
+- Determine research direction： 
+    - [SPAKT: A Self-Supervised Pre-TrAining Method for Knowledge Tracing](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9813711&tag=1)
+    - [SAINT+: Integrating Temporal Features for EdNet Correctness Prediction](https://paperswithcode.com/paper/saint-integrating-temporal-features-for-ednet)
 
 ## 8.18 
 ### Things to do
