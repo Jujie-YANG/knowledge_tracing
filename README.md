@@ -2,6 +2,8 @@
 
 [Knowledge Tracing(paperswithcode)](https://paperswithcode.com/task/knowledge-tracing): Knowledge Tracing is the task of modelling student knowledge over time so that we can accurately predict how students will perform on future interactions. Improvement on this task means that resources can be suggested to students based on their individual needs, and content which is predicted to be too easy or too hard can be skipped or delayed.
 
+## Dataset
+- [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
 
 ## Kaggle Materials: 
 - Competition:
