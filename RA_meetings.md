@@ -1,8 +1,9 @@
 # Logs of meetings with Zhaoxing
 ## 9.8
 - Determine model structure
-    - Self-supervised pre-training + SAINT+
-
+    - SSL(Self-Supervised Learning: pre-training) + SAINT+
+    - And then compare to other SOTA models, e.g. SAINT, AKT, KT machine etc.
+    
 ## 9.1
 - Determine research direction： 
     - [SPAKT: A Self-Supervised Pre-TrAining Method for Knowledge Tracing](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9813711&tag=1) and its corresponding [code here](https://github.com/Vinci-hp/pretrainKT) 
