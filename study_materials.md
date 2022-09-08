@@ -13,7 +13,8 @@
 - Loss: reduction (string, optional) – Specifies the reduction to apply to the output
     - Training: ```loss = lossFunc(task1_pre, task1_gold)```:[nn.BCELoss(reduction='sum')](https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html)
     - PreTraining: ```loss = multi_loss(pre_mask_q, gold_q, pre_mask_s, gold_s, pre_dif_q, gold_dif_q)```: 
-        - mask_q_loss & mask_s_loss = F.cross_entropy(pre_q, gold_q, ignore_index=Constants.PAD, reduction='mean') ([nn.CrossEntropyLoss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html))
+        - mask_q_loss & mask_s_loss = ```F.cross_entropy(pre_q, gold_q, ignore_index=Constants.PAD, reduction='mean')``` ([nn.CrossEntropyLoss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html))
         - dif_loss = mse(pre_dif, gold_dif) ```nn.MSELoss(reduction='mean')```([nn.MSELoss(reduction='mean')](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html))
+        - loss = mask_q_loss + mask_s_loss + 30*dif_loss
         
     
