@@ -14,3 +14,11 @@
 
 ## Conference:
 - [CHI 2023](https://chi2023.acm.org/)
+
+## Requirement:
+- ### Packages:
+    - torch
+    - pytorch-lightning
+    - pandas
+    - numpy
+    - scikit-learn
