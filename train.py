@@ -1,4 +1,5 @@
-from config import Config
+# from config import Config
+from opts import saint_plus_opts
 from dataset import get_dataloaders
 
 import numpy as np
@@ -8,6 +9,8 @@ import pytorch_lightning as pl
 from torch import nn
 import torch
 import torch.nn.functional as F
+
+params = saint_plus_opts()
 
 
 class FFN(nn.Module):
@@ -34,7 +37,8 @@ class EncoderEmbedding(nn.Module):
     def forward(self, exercises, categories):
         e = self.exercise_embed(exercises)
         c = self.category_embed(categories)
-        seq = torch.arange(self.seq_len, device=Config.device).unsqueeze(0)
+        # seq = torch.arange(self.seq_len, device=Config.device).unsqueeze(0)
+        seq = torch.arange(self.seq_len).unsqueeze(0)
         p = self.position_embed(seq)
         return p + c + e
 
@@ -50,7 +54,8 @@ class DecoderEmbedding(nn.Module):
 
     def forward(self, responses):
         e = self.response_embed(responses)
-        seq = torch.arange(self.seq_len, device=Config.device).unsqueeze(0)
+        # seq = torch.arange(self.seq_len, device=Config.device).unsqueeze(0)
+        seq = torch.arange(self.seq_len).unsqueeze(0)
         p = self.position_embed(seq)
         return p + e
 
@@ -81,7 +86,9 @@ class StackedNMultiHeadAttention(nn.Module):
                                                                               1, 0, 2),
                                                                           value=norm_v.permute(
                                                                               1, 0, 2),
-                                                                          attn_mask=self.mask.to(Config.device))
+                                                                          #  attn_mask=self.mask.to(Config.device))
+                                                                          #  device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                                                                          attn_mask=self.mask.to(torch.device("cuda" if torch.cuda.is_available() else "cpu")))
                 heads_output = heads_output.permute(1, 0, 2)
                 #assert encoder_output != None and break_layer is not None
                 if encoder_output != None and multihead == break_layer:
@@ -104,23 +111,23 @@ class PlusSAINTModule(pl.LightningModule):
         # n_encoder,n_detotal_responses,seq_len,max_time=300+1
         super(PlusSAINTModule, self).__init__()
         self.loss = nn.BCEWithLogitsLoss()
-        self.encoder_layer = StackedNMultiHeadAttention(n_stacks=Config.NUM_DECODER,
-                                                        n_dims=Config.EMBED_DIMS,
-                                                        n_heads=Config.DEC_HEADS,
-                                                        seq_len=Config.MAX_SEQ,
+        self.encoder_layer = StackedNMultiHeadAttention(n_stacks=params.NUM_DECODER,
+                                                        n_dims=params.EMBED_DIMS,
+                                                        n_heads=params.DEC_HEADS,
+                                                        seq_len=params.MAX_SEQ,
                                                         n_multihead=1, dropout=0.0)
-        self.decoder_layer = StackedNMultiHeadAttention(n_stacks=Config.NUM_ENCODER,
-                                                        n_dims=Config.EMBED_DIMS,
-                                                        n_heads=Config.ENC_HEADS,
-                                                        seq_len=Config.MAX_SEQ,
+        self.decoder_layer = StackedNMultiHeadAttention(n_stacks=params.NUM_ENCODER,
+                                                        n_dims=params.EMBED_DIMS,
+                                                        n_heads=params.ENC_HEADS,
+                                                        seq_len=params.MAX_SEQ,
                                                         n_multihead=2, dropout=0.0)
-        self.encoder_embedding = EncoderEmbedding(n_exercises=Config.TOTAL_EXE,
-                                                  n_categories=Config.TOTAL_CAT,
-                                                  n_dims=Config.EMBED_DIMS, seq_len=Config.MAX_SEQ)
+        self.encoder_embedding = EncoderEmbedding(n_exercises=params.TOTAL_EXE,
+                                                  n_categories=params.TOTAL_CAT,
+                                                  n_dims=params.EMBED_DIMS, seq_len=params.MAX_SEQ)
         self.decoder_embedding = DecoderEmbedding(
-            n_responses=3, n_dims=Config.EMBED_DIMS, seq_len=Config.MAX_SEQ)
-        self.elapsed_time = nn.Linear(1, Config.EMBED_DIMS)
-        self.fc = nn.Linear(Config.EMBED_DIMS, 1)
+            n_responses=3, n_dims=params.EMBED_DIMS, seq_len=params.MAX_SEQ)
+        self.elapsed_time = nn.Linear(1, params.EMBED_DIMS)
+        self.fc = nn.Linear(params.EMBED_DIMS, 1)
 
     def forward(self, x, y):
         enc = self.encoder_embedding(
