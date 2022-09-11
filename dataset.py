@@ -1,7 +1,7 @@
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import pandas as pd
-from config import Config
+# from config import Config
 from sklearn.model_selection import train_test_split
 import gc
 
@@ -59,7 +59,7 @@ def get_dataloaders():
               'answered_correctly': 'int8', "content_type_id": "int8",
               "prior_question_elapsed_time": "float32", "task_container_id": "int16"}
     print("loading csv.....")
-    train_df = pd.read_csv(Config.TRAIN_FILE, usecols=[
+    train_df = pd.read_csv(params.TRAIN_FILE, usecols=[
                            1, 2, 3, 4, 5, 7, 8], dtype=dtypes, nrows=90e6)
     print("shape of dataframe :", train_df.shape)
 
@@ -87,14 +87,14 @@ def get_dataloaders():
     print("splitting")
     train, val = train_test_split(group, test_size=0.2)
     print("train size: ", train.shape, "validation size: ", val.shape)
-    train_dataset = DKTDataset(train, max_seq=Config.MAX_SEQ)
-    val_dataset = DKTDataset(val, max_seq=Config.MAX_SEQ)
+    train_dataset = DKTDataset(train, max_seq=params.MAX_SEQ)
+    val_dataset = DKTDataset(val, max_seq=params.MAX_SEQ)
     train_loader = DataLoader(train_dataset,
-                              batch_size=Config.BATCH_SIZE,
+                              batch_size=params.BATCH_SIZE,
                               num_workers=8,
                               shuffle=True)
     val_loader = DataLoader(val_dataset,
-                            batch_size=Config.BATCH_SIZE,
+                            batch_size=params.BATCH_SIZE,
                             num_workers=8,
                             shuffle=False)
     del train_dataset, val_dataset
