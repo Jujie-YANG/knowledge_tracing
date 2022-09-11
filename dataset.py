@@ -2,8 +2,11 @@ from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import pandas as pd
 # from config import Config
+from opts import saint_plus_opts
 from sklearn.model_selection import train_test_split
 import gc
+
+params = saint_plus_opts()
 
 
 class DKTDataset(Dataset):
