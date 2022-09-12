@@ -14,8 +14,10 @@ def saint_plus_opts():
     parser.add_argument('--NUM_ENCODER', default=4)
     parser.add_argument('--NUM_DECODER', default=4)
     parser.add_argument('--BATCH_SIZE', default=32)
+    # parser.add_argument(
+    #     '--TRAIN_FILE', default="../input/riiid-test-answer-prediction/train.csv")
     parser.add_argument(
-        '--TRAIN_FILE', default="../input/riiid-test-answer-prediction/train.csv")
+        '--TRAIN_FILE', default="../input/riiid-test-answer-prediction/train_tiny.csv")
     parser.add_argument('--TOTAL_EXE', default=13523)
     parser.add_argument('--TOTAL_CAT', default=10000)
 
