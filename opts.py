@@ -1,5 +1,7 @@
 import argparse
 
+# The same format of argument parser as this repo: https://github.com/sayam56/Pattern_HandGestureDetection/blob/7db8abc5eaa1427d1a60f3ae830cff7a64f8362b/opts.py
+
 
 def saint_plus_opts():
     # Here are all params for saint+ model
