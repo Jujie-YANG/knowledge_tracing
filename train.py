@@ -199,6 +199,6 @@ if __name__ == "__main__":
     train_loader, val_loader = get_dataloaders()
     saint_plus = PlusSAINTModule()
     # trainer = pl.Trainer(gpus=-1, max_epochs=5, progress_bar_refresh_rate=21)
-    trainer = pl.Trainer()
-    trainer.fit(model=saint_plus, train_dataloader=train_loader,
-                val_dataloaders=[val_loader, ])
+    trainer = pl.Trainer(max_epochs=5)
+    trainer.fit(saint_plus, train_loader,
+                [val_loader, ])
