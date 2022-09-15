@@ -1,4 +1,13 @@
 # Logs of meetings with Zhaoxing
+## 9.15
+- Main task: 
+    - Get familiar with the architecture BERT
+        - 李宏毅BERT视频讲解
+
+- Others:
+    - Get familiar with [SAINT+](https://github.com/Shivanandmn/SAINT_plus-Knowledge-Tracing-) architecture
+    - Find some other pre-train models (fine tuned BERT architecture)
+
 ## 9.8
 - Determine model structure
     - [SSL(Self-Supervised Learning: pre-training)](https://github.com/Vinci-hp/pretrainKT) + [SAINT+](https://github.com/Shivanandmn/SAINT_plus-Knowledge-Tracing-)
