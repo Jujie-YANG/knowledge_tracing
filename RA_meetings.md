@@ -2,7 +2,7 @@
 ## 9.15
 - Main task: 
     - Get familiar with the architecture BERT
-        - 李宏毅BERT视频讲解
+        - [Bilibili李宏毅BERT视频讲解](https://www.bilibili.com/video/BV1eV411d7Kp/?vd_source=4e20016bd1355fe9ad9e32194a97d42a)
 
 - Others:
     - Get familiar with [SAINT+](https://github.com/Shivanandmn/SAINT_plus-Knowledge-Tracing-) architecture
