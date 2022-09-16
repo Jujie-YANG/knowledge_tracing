@@ -6,6 +6,10 @@
     - [This repo is built for paper: Attention Mechanisms in Computer Vision: A Survey paper](https://github.com/MenghaoGuo/Awesome-Vision-Attentions)
     - [FightingCV 代码库， 包含 Attention,Backbone, MLP, Re-parameter, Convolution](https://github.com/xmu-xiaoma666/External-Attention-pytorch)
 
+    - ### BERT
+        - [Hugging Face: BERT](https://huggingface.co/blog/bert-101)
+        - [BERT Explained: State of the art language model for NLP(2018)](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
+
 ## Small points
 - [【Python】 垃圾回收机制和gc模块](https://www.cnblogs.com/franknihao/p/7326849.html): # gc.collect() 返回处理这些循环引用一共释放掉的对象个数
 - [argparse — Parser for command-line options, arguments and sub-commands](https://docs.python.org/3/library/argparse.html)
