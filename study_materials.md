@@ -13,6 +13,7 @@
     - Tutorials:
         - [Bilibili李宏毅BERT视频讲解](https://www.bilibili.com/video/BV1eV411d7Kp/?vd_source=4e20016bd1355fe9ad9e32194a97d42a)
         - [More tutorials regarding DL/ML given by 李宏毅 including GPT-3, GAN, SSL...](https://www.bilibili.com/video/BV1J94y1f7u5?p=50&vd_source=4e20016bd1355fe9ad9e32194a97d42a)
+        - [Bilibili李宏毅Self supervised learning视频讲解(4 episodes)](https://www.bilibili.com/video/BV1J94y1f7u5?p=46)
 
 ## Small points
 - [【Python】 垃圾回收机制和gc模块](https://www.cnblogs.com/franknihao/p/7326849.html): # gc.collect() 返回处理这些循环引用一共释放掉的对象个数
