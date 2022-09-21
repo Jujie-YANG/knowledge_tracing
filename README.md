@@ -4,6 +4,7 @@
 
 ## Dataset
 - [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
+- [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
 
 ## Kaggle Materials: 
 - Competition:
