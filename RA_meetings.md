@@ -1,4 +1,9 @@
 # Logs of meetings with Zhaoxing
+## 9.22
+- Be more familiar with BERT
+    - There is already [a BERT based knowledge tracing experiment:MonaCoBERT](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert)
+    - Triangular mask (saint+) -> Monotonic attention (MonaCoBERT)
+
 ## 9.15
 - Main task: 
     - Get familiar with the architecture BERT
