@@ -3,7 +3,7 @@
 
 
 
-## Learning materials about Self supervised learning(SSL)
+## Learning materials about Self Supervised Learning(SSL)
 - ### Articles:
 
 - ### Tutorials:
