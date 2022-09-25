@@ -1,8 +1,5 @@
 # Learning Materials
 
-
-
-
 ## Learning materials about Self Supervised Learning(SSL)
 - ### Articles:
 
