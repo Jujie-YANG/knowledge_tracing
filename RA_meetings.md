@@ -3,6 +3,7 @@
 - Be more familiar with BERT
     - There is already [a BERT based knowledge tracing experiment:MonaCoBERT](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert)
     - Triangular mask (saint+) -> Monotonic attention (MonaCoBERT)
+- Find out how the inputs of the BERT looks like: refer to another RA code
 
 ## 9.15
 - Main task: 
