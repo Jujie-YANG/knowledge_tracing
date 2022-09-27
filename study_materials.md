@@ -16,6 +16,9 @@
 - ### GitHub repo:
     - [Google Albert](https://github.com/google-research/albert): A Lite BERT for Self-supervised Learning of **Language Representations**
 
+- ### Other two BERT applications in KT
+    - [MathBERT: A Pre-trained Language Model for General NLP Tasks in Mathematics Education](https://paperswithcode.com/paper/mathbert-a-pre-trained-language-model-for) - Tensorflow
+    - [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert) - Pytorch
 
 ## Small points
 - [【Python】 垃圾回收机制和gc模块](https://www.cnblogs.com/franknihao/p/7326849.html): # gc.collect() 返回处理这些循环引用一共释放掉的对象个数
