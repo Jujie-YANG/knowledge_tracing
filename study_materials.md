@@ -1,4 +1,9 @@
 # Learning Materials
+## Learning materials about Attention
+- ### Articles:
+
+- ### Tutorials:
+    - [Bilibili李宏毅 Self-Attention视频讲解(2 episodes)](https://www.bilibili.com/video/BV1J94y1f7u5?p=26)
 
 ## Learning materials about Self Supervised Learning(SSL)
 - ### Articles:
