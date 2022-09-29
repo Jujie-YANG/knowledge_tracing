@@ -1,4 +1,7 @@
 # Logs of meetings with Zhaoxing
+## 9.29
+Research Question: Aim to solve cold start problem (small amount of data input)
+
 ## 9.22
 - Be more familiar with BERT
     - There is already [a BERT based knowledge tracing experiment:MonaCoBERT](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert)
