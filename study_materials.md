@@ -1,7 +1,8 @@
 # Learning Materials
 ## Learning materials about Attention
 - ### Articles:
-
+    - [PYTORCH-TRANSFORMERS](https://pytorch.org/hub/huggingface_pytorch-transformers/):PyTorch implementations of popular NLP Transformers
+    
 - ### Tutorials:
     - [Bilibili李宏毅 Self-Attention视频讲解(2 episodes)](https://www.bilibili.com/video/BV1J94y1f7u5?p=26)
 
