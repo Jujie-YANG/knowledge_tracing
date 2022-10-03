@@ -6,11 +6,13 @@
 - ### Tutorials:
     - [Bilibili李宏毅 Self-Attention视频讲解(2 episodes)](https://www.bilibili.com/video/BV1J94y1f7u5?p=26)
 
+
 ## Learning materials about Self Supervised Learning(SSL)
 - ### Articles:
 
 - ### Tutorials:
     - [Bilibili李宏毅Self supervised learning视频讲解(4 episodes)](https://www.bilibili.com/video/BV1J94y1f7u5?p=46)
+
 
 ## Learning materials about BERT
 - ### Blogs:
@@ -27,6 +29,7 @@
     - [MathBERT: A Pre-trained Language Model for General NLP Tasks in Mathematics Education](https://paperswithcode.com/paper/mathbert-a-pre-trained-language-model-for) - Tensorflow
     - [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert) - Pytorch
 
+
 ## Small points
 - [【Python】 垃圾回收机制和gc模块](https://www.cnblogs.com/franknihao/p/7326849.html): # gc.collect() 返回处理这些循环引用一共释放掉的对象个数
 - [argparse — Parser for command-line options, arguments and sub-commands](https://docs.python.org/3/library/argparse.html)
@@ -38,6 +41,7 @@
         - dif_loss = mse(pre_dif, gold_dif) ```nn.MSELoss(reduction='mean')```([nn.MSELoss(reduction='mean')](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html))
         - loss = mask_q_loss + mask_s_loss + 30*dif_loss
 - [torch.nn.Embedding explained (+ Character-level language model)](https://www.youtube.com/watch?v=euwN5DHfLEo&ab_channel=mildlyoverfitted)
+
 
 ## Others
 - ### Blogs:
