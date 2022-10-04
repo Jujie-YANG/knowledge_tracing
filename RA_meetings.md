@@ -1,6 +1,7 @@
 # Logs of meetings with Zhaoxing
 ## 9.29
-Research Question: Aim to solve cold start problem (small amount of data input)
+- Research Question: Aim to solve cold start problem (small amount of data input)
+- Look at [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://paperswithcode.com/paper/monacobert-monotonic-attention-based-convbert)
 
 ## 9.22
 - Be more familiar with BERT
