@@ -24,6 +24,7 @@
 - ### GitHub repo:
     - [Google: Albert](https://github.com/google-research/albert): A Lite BERT for Self-supervised Learning of **Language Representations**
     - [Google: TensorFlow code and pre-trained models for BERT](https://github.com/google-research/bert)
+    - [Google AI 2018 BERT pytorch implementation](https://github.com/codertimo/BERT-pytorch)
     
 - ### Other two BERT applications in KT
     - [MathBERT: A Pre-trained Language Model for General NLP Tasks in Mathematics Education](https://paperswithcode.com/paper/mathbert-a-pre-trained-language-model-for) - Tensorflow
