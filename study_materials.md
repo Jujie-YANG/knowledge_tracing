@@ -20,7 +20,9 @@
     - [BERT Explained: State of the art language model for NLP(2018)](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
 - ### Tutorials:
     - [Bilibili李宏毅BERT视频讲解](https://www.bilibili.com/video/BV1J94y1f7u5/?p=50)
-    - [Bert fine-tune tutorials](https://mccormickml.com/2019/07/22/BERT-fine-tuning/) + [Part2 training and validation](https://www.youtube.com/watch?v=Hnvb9b7a_Ps)
+    - [Bert fine-tune tutorials](https://mccormickml.com/2019/07/22/BERT-fine-tuning/)
+        - [BERT Research - Ep. 3 - Fine Tuning - p.1](https://www.youtube.com/watch?v=x66kkDnbzi4&t=3s&ab_channel=ChrisMcCormickAI)
+        - [BERT Research - Ep. 3 - Fine Tuning - p.2](https://www.youtube.com/watch?v=Hnvb9b7a_Ps)
     
 - ### GitHub repo:
     - [Google: Albert](https://github.com/google-research/albert): A Lite BERT for Self-supervised Learning of **Language Representations**
