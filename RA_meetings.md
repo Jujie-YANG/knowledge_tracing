@@ -1,4 +1,10 @@
 # Logs of meetings with Zhaoxing
+## 10.19
+- Two Useful Kaggle Notebooks:
+    - [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public)
+    - [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model)
+
+
 ## 10.12
 - Consider what features Kaggle normally used (EdNet)
 
