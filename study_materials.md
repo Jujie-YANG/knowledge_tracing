@@ -23,7 +23,8 @@
     - [Bert fine-tune tutorials](https://mccormickml.com/2019/07/22/BERT-fine-tuning/)
         - [BERT Research - Ep. 3 - Fine Tuning - p.1](https://www.youtube.com/watch?v=x66kkDnbzi4&t=3s&ab_channel=ChrisMcCormickAI)
         - [BERT Research - Ep. 3 - Fine Tuning - p.2](https://www.youtube.com/watch?v=Hnvb9b7a_Ps)
-    
+        - [BERT Fine-Tuning Sentence Classification v4.ipynb](https://colab.research.google.com/drive/1pTuQhug6Dhl9XalKB0zUGf4FIdYFlpcX#scrollTo=1sjzRT1V0zwm)
+
 - ### GitHub repo:
     - [Google: Albert](https://github.com/google-research/albert): A Lite BERT for Self-supervised Learning of **Language Representations**
     - [Google: TensorFlow code and pre-trained models for BERT](https://github.com/google-research/bert)
