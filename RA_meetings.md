@@ -1,4 +1,8 @@
 # Logs of meetings with Zhaoxing
+## 10.26
+- Run [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model)
+- Find some other techniques (models) combined with some forgetting machenism or normalizations as a block in front of BERT model
+
 ## 10.19
 - Two Useful Kaggle Notebooks:
     - [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public)
