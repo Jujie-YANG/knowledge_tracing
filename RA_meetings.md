@@ -1,4 +1,8 @@
 # Logs of meetings with Zhaoxing
+## 11.2
+- Give up [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model), because it is not reproducible
+- Try to run - the Kaggle notebook: [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public), and replaced the model with pretrained BERT model
+
 ## 10.26
 - Run [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model)
 - Find some other techniques (models) combined with some forgetting machenism or normalizations as a block in front of BERT model
