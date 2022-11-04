@@ -1,5 +1,10 @@
 # Logs of meetings with Zhaoxing
 ## 11.2
+- Things to do in the lab:
+    - AIED theme: "AI in Education for Sustainable Society", feature selection may close to accessibility of disabled people
+    - password: yyy (yeah yeah yeah)
+    - Build virtual env
+
 - Give up [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model), because it is not reproducible
 - Try to run - the Kaggle notebook: [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public), and replaced the model with pretrained BERT model
 
