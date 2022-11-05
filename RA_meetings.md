@@ -3,7 +3,7 @@
 - Things to do in the lab:
     - AIED theme: "AI in Education for Sustainable Society", feature selection may close to accessibility of disabled people
     - password: yyy (yeah yeah yeah)
-    - Build virtual env
+    - Build virtual env: [conda create -n pytorchenv python=3.9 anaconda](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) - conda activate pyorchenv / conda deactivate - if activate correctly: ```(pytorchenv) C:\User\..```
 
 - Give up [bert_like_model](https://www.kaggle.com/code/luffy521/bert-like-model), because it is not reproducible
 - Try to run - the Kaggle notebook: [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public), and replaced the model with pretrained BERT model
