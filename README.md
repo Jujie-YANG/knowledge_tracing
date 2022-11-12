@@ -7,7 +7,7 @@
 - [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
   - Data Info:
     - n_skills: 13523 (SAKT code)
-    - input: timestamp(ascending), user_id, content_id, content_type_id(0-questions), answered_correctly
+    - input: timestamp(ascending), user_id, content_id(skills), content_type_id(0-questions), answered_correctly
 
 ## Kaggle Materials: 
 - Competition:
