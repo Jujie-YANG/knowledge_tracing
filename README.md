@@ -6,7 +6,8 @@
 - [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
 - [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
   - Data Info:
-    - n_skills: 13523 (SAKT code)
+    - n_skills: 13523
+    - index:user_id, len(train_group)=320000, len(valid_group)=73656, train:valid = 8:2
     - input: timestamp(ascending), user_id, content_id(skills), content_type_id(0-questions), answered_correctly
 
 ## Kaggle Materials: 
