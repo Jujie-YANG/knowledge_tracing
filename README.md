@@ -10,6 +10,20 @@
     - index:user_id, len(train_group)=320000, len(valid_group)=73656, train:valid = 8:2
     - input: timestamp(ascending), user_id, content_id(skills), content_type_id(0-questions), answered_correctly
 
+## CodewithPaper
+- [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://github.com/codingchild2424/MonaCoBERT)
+  - ``` 
+        # question embedding
+        self.emb_q = nn.Embedding(self.num_q, self.hidden_size).to(self.device)
+        # response embedding
+        self.emb_r = nn.Embedding(self.num_r, self.hidden_size).to(self.device)
+        # positional embedding
+        self.emb_pid = nn.Embedding(self.num_pid, self.hidden_size).to(self.device)
+
+        self.emb_diff = nn.Embedding(self.num_diff, self.hidden_size).to(self.device)  diff-hardcode = 101?
+
+        self.emb_p = nn.Embedding(self.max_seq_len, self.hidden_size).to(self.device) - p?```
+
 ## Kaggle Materials: 
 - Competition:
 [Riiid AIEd Challenge 2020](https://www.kaggle.com/competitions/riiid-test-answer-prediction/overview): In this competition, your challenge is to create algorithms for "Knowledge Tracing," the modeling of student knowledge over time. The goal is to accurately predict how students will perform on future interactions. You will pair your machine learning skills using Riiid’s EdNet data.
