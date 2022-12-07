@@ -1,4 +1,10 @@
 # Logs of meetings with Zhaoxing
+## 12.7
+- Models to add before BERT:
+    - [Deep Graph Memory Networks for Forgetting-Robust Knowledge Tracing](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9891841&casa_token=XQitOqakP6YAAAAA:CwW96DselXHTS7CI9jE5ypYBspJ_rd-BU91ndt0oJxD0Jvg09JRAo-L7WLm5oHRDA3dUHsg&tag=1): AKT [8]: This model combines an attention model with Rasch model-based embeddings, which exponentially decays attention weights w.r.t. the distance of questions in a sequence in order to account for student’s forgetting effect.
+    - [Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM): HawkesKT [23]: This model uses the Hawkes process [26] to count for a student’s forgetting behavior.
+
+
 ## 11.2
 - Things to do in the lab:
     - AIED theme: "AI in Education for Sustainable Society", feature selection may close to accessibility of disabled people
