@@ -4,6 +4,10 @@
 
 BERT is a powerful language processing model that can be used for a wide range of natural language processing tasks, but it is not specifically designed for knowledge tracing. Instead, you may want to use a different type of machine learning model, such as a recurrent neural network (RNN) or a long short-term memory (LSTM) model, which are well-suited to analyzing sequential data like student performance data. These models can learn to make predictions about a student's knowledge based on their previous performance, and can be trained using a variety of techniques.
 
+Monotonic attention is a type of attention mechanism that allows a model to focus on different parts of its input in a monotonic fashion, meaning that the model's focus on the input always moves forward and never goes backwards. This can be useful for tasks like machine translation, where the model needs to process the input sentence one word at a time in a specific order.
+
+Span dynamic convolutional attention is a type of attention mechanism that allows a model to focus on different parts of its input using a convolutional neural network. This allows the model to dynamically adjust its focus on the input based on the context of the words, rather than just processing the input in a fixed order. This can be useful for tasks like language modeling, where the model needs to understand the meaning of words in context in order to make accurate predictions.
+
 ## Dataset
 - [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
 - [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
