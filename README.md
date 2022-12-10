@@ -8,6 +8,8 @@ Monotonic attention is a type of attention mechanism that allows a model to focu
 
 Span dynamic convolutional attention is a type of attention mechanism that allows a model to focus on different parts of its input using a convolutional neural network. This allows the model to dynamically adjust its focus on the input based on the context of the words, rather than just processing the input in a fixed order. This can be useful for tasks like language modeling, where the model needs to understand the meaning of words in context in order to make accurate predictions.
 
+It is a custom model called SAKT model (Sequential Adaptive Knowledge Tracing) that is designed for knowledge tracing tasks. The SAKT model incorporates the self-attention mechanism used in BERT to better capture the sequential dependencies between student responses to questions.
+
 ## Dataset
 - [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
 - [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
