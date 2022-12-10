@@ -2,6 +2,8 @@
 
 [Knowledge Tracing(paperswithcode)](https://paperswithcode.com/task/knowledge-tracing): Knowledge Tracing is the task of modelling student knowledge over time so that we can accurately predict how students will perform on future interactions. Improvement on this task means that resources can be suggested to students based on their individual needs, and content which is predicted to be too easy or too hard can be skipped or delayed.
 
+BERT is a powerful language processing model that can be used for a wide range of natural language processing tasks, but it is not specifically designed for knowledge tracing. Instead, you may want to use a different type of machine learning model, such as a recurrent neural network (RNN) or a long short-term memory (LSTM) model, which are well-suited to analyzing sequential data like student performance data. These models can learn to make predictions about a student's knowledge based on their previous performance, and can be trained using a variety of techniques.
+
 ## Dataset
 - [ASSISTmentsData](https://sites.google.com/site/assistmentsdata/datasets)
 - [Kaggle: Riiid Answer Correctness Prediction](https://www.kaggle.com/competitions/riiid-test-answer-prediction/data)
