@@ -77,6 +77,8 @@ Here is an example to illustrate the difference between x and target_id:
 x = [101, 2, 103, 4, 105, 6, 107, 8, 109, 10]
 target_id = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+The SAKTModel class is a PyTorch neural network that is used to train a student activity knowledge tracing (SAKT) model. The model uses a multi-head attention mechanism to learn the relationships between the student's responses to a sequence of questions and to make predictions about the student's knowledge of each skill (represented by a content ID in the input data). The model's architecture is similar to the BERT model, with a few modifications to make it suitable for the SAKT task.
+
 The forward method of the SAKTModel class defines how the input data is processed by the network. It takes as input the student's responses to a sequence of questions (`x`) and the IDs of the questions that were presented to the student (`question_ids`). It first applies the embedding and pos_embedding layers to `x` to generate a sequence of vectors representing the student's responses and their positions in the input sequence. It then applies the `e_embedding` layer to `question_ids` to generate a sequence of vectors representing the questions that were presented to the student.
 
 Next, the method uses the `multi_att` layer to compute attention weights for each student response, using the output of the `e_embedding` layer as the query and the output of the `embedding` and `pos_embedding` layers as the key and value, respectively. The attention weights are used to compute a weighted sum of the query vectors, which is then added to the output of the e_embedding layer and passed through the layer_normal layer.
