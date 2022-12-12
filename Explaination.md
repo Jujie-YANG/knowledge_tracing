@@ -49,7 +49,7 @@ x[:10] += [1, 0, 1, 0, 1, 0, 1, 0, 1, 0] * n_skill  # add the correct answers to
 ```
 
 ### Does 'x' consists of the content IDs for each sample shifted by one?
-No, x does not consist of the content IDs for each sample shifted by one. x consists of the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly. The content IDs for the questions that are presented after each sample are stored in the target_id array, which is a separate array from x.
+No, `x` does not consist of the content IDs for each sample shifted by one. `x` consists of the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly. The content IDs for the questions that are presented after each sample are stored in the `target_id` array, which is a separate array from `x`.
 
 For example, if q and qa have the following values:
 ```
@@ -59,5 +59,5 @@ qa = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 x = [101, 2, 103, 4, 105, 6, 107, 8, 109, 10]
 target_id = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-As you can see, the values in x consist of the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly (1 if the user answered correctly, 0 if the user answered incorrectly). The content IDs for the questions that were presented after each sample are stored in the target_id array.
+As you can see, the values in `x` consist of the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly (1 if the user answered correctly, 0 if the user answered incorrectly). The content IDs for the questions that were presented after each sample are stored in the `target_id` array.
 
