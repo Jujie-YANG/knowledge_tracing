@@ -30,3 +30,20 @@ x_input is a tensor representing the input data for the BERT model. In the code 
 
 ### My training batch size of my dataloader is 64, I think the batch_size of 'x_input' should also be 64?
 x_input is a tensor containing the input data for a single training example. The batch size of the dataloader determines how many training examples are processed in a single step. So, x_input should have a batch size of 1, not 64.
+
+### 
+```
+# Assume the following values for the input parameters:
+# n_skill = 100  # total number of skills/questions
+# max_seq = 128  # maximum sequence length
+
+# The user has answered 10 questions with the following IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# The user has answered the questions correctly as follows: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+
+x = np.zeros(max_seq-1, dtype=int)  # initialize the input sequence with zeros
+x[:10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # copy the question IDs into the first 10 elements of x
+x[:10] += [1, 0, 1, 0, 1, 0, 1, 0, 1, 0] * n_skill  # add the correct answers to the corresponding elements of x
+
+# The resulting value of x will be:
+# [101, 2, 103, 4, 105, 6, 107, 8, 109, 10]
+```
