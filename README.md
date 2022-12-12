@@ -18,6 +18,12 @@ It is a custom model called SAKT model (Sequential Adaptive Knowledge Tracing) t
     - index:user_id, len(train_group)=320000, len(valid_group)=73656, train:valid = 8:2
     - input: timestamp(ascending), user_id, content_id(skills), content_type_id(0-questions), answered_correctly
 
+## Model
+- Inputs:
+  - 'x': student response
+  - 'target_id': Content_Id
+  - 'label': answer_correctly
+  
 ## CodewithPaper
 - [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://github.com/codingchild2424/MonaCoBERT)
   - ``` 
