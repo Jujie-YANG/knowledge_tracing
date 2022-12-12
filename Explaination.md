@@ -61,3 +61,25 @@ target_id = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 As you can see, the values in `x` consist of the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly (1 if the user answered correctly, 0 if the user answered incorrectly). The content IDs for the questions that were presented after each sample are stored in the `target_id` array.
 
+### What's the difference of 'x' and 'target_id'?
+x is a numpy array that contains the content IDs for the questions that were presented to the user before each sample, plus a binary indicator for whether the user answered each question correctly. x is used as the input to the model and the model uses the values in x to make predictions about the answers to the questions that were presented to the user.
+
+target_id is a numpy array that contains the content IDs for the questions that were presented to the user after each sample. The values in target_id are not used as input to the model, but they are used to calculate the loss during training and to evaluate the model's performance on the validation set.
+
+Here is an example to illustrate the difference between x and target_id:
+```
+# Assume the following values for the input parameters:
+# q = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# qa = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+# n_skill = 100
+
+# The values of x and target_id would be:
+x = [101, 2, 103, 4, 105, 6, 107, 8, 109, 10]
+target_id = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+The forward method of the SAKTModel class defines how the input data is processed by the network. It takes as input the student's responses to a sequence of questions (`x`) and the IDs of the questions that were presented to the student (`question_ids`). It first applies the embedding and pos_embedding layers to `x` to generate a sequence of vectors representing the student's responses and their positions in the input sequence. It then applies the `e_embedding` layer to `question_ids` to generate a sequence of vectors representing the questions that were presented to the student.
+
+Next, the method uses the `multi_att` layer to compute attention weights for each student response, using the output of the `e_embedding` layer as the query and the output of the `embedding` and `pos_embedding` layers as the key and value, respectively. The attention weights are used to compute a weighted sum of the query vectors, which is then added to the output of the e_embedding layer and passed through the layer_normal layer.
+
+The output of the attention layer is then passed through the `ffn` layer to generate a sequence of vectors representing the student's knowledge of each skill. Finally, the `pred` layer is applied to this sequence to make predictions about the student's knowledge of each skill. The method returns the predicted knowledge values and the attention weights computed by the `multi_att` layer.
+
