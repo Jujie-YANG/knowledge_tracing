@@ -1,4 +1,11 @@
 # Logs of meetings with Zhaoxing
+## 12.13
+- For the SAKT model, it should calculate accuracy of predicting last value of output sequence. (Look through Kaggle code notebook to see how they calculate the acc, loss, and auc)
+- Try to understand MonaCoBert
+    - The inputs of the model?
+    - The dataloader, dataset it used?
+- Look through Rasch model([Context-Aware Attentive Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3394486.3403282)) and Hawkes process ([Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM)) to add the forgetting mechanism 
+
 ## 12.7
 - Models to add before BERT:
     - [Deep Graph Memory Networks for Forgetting-Robust Knowledge Tracing](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9891841&casa_token=XQitOqakP6YAAAAA:CwW96DselXHTS7CI9jE5ypYBspJ_rd-BU91ndt0oJxD0Jvg09JRAo-L7WLm5oHRDA3dUHsg&tag=1): AKT [8]: This model combines an attention model with Rasch model-based embeddings, which exponentially decays attention weights w.r.t. the distance of questions in a sequence in order to account for student’s forgetting effect.
