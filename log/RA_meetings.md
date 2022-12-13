@@ -4,6 +4,7 @@
 - Try to understand MonaCoBert
     - The inputs of the model?
     - The dataloader, dataset it used?
+- How does someone do with SAKT algorithms  
 - Look through Rasch model([Context-Aware Attentive Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3394486.3403282)) and Hawkes process ([Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM)) to add the forgetting mechanism 
 
 ## 12.7
