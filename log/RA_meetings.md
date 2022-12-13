@@ -1,10 +1,13 @@
 # Logs of meetings with Zhaoxing
 ## 12.13
 - For the SAKT model, it should calculate accuracy of predicting last value of output sequence. (Look through Kaggle code notebook to see how they calculate the acc, loss, and auc)
-- Try to understand MonaCoBert
+- Try to understand [MonaCoBert](https://github.com/codingchild2424/MonaCoBERT)
     - The inputs of the model?
     - The dataloader, dataset it used?
-- How does someone do with SAKT algorithms  
+- How does someone do with SAKT algorithms (Below are three repo using SAKT)
+    - [shalini1194/SAKT](https://github.com/shalini1194/SAKT/tree/master/2019-EDM)
+    - [Simple and performant implementations of learner performance prediction algorithms](https://github.com/theophilegervet/learner-performance-prediction)
+    - [jdxyw/deepKT](https://github.com/jdxyw/deepKT)
 - Look through Rasch model([Context-Aware Attentive Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3394486.3403282)) and Hawkes process ([Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM)) to add the forgetting mechanism 
 
 ## 12.7
