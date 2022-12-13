@@ -25,6 +25,15 @@ It is a custom model called SAKT model (Sequential Adaptive Knowledge Tracing) t
   - 'x': student response
   - 'target_id': Content_Id
   - 'label': answer_correctly
+ 
+## Training/Inference
+- optimizer: 
+- criterion: 
+- scheduler:
+- epochs:
+
+## Result:
+
   
 ## CodewithPaper
 - [MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing](https://github.com/codingchild2424/MonaCoBERT)
