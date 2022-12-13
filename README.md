@@ -54,6 +54,7 @@ It is a custom model called SAKT model (Sequential Adaptive Knowledge Tracing) t
 [Riiid AIEd Challenge 2020](https://www.kaggle.com/competitions/riiid-test-answer-prediction/overview): In this competition, your challenge is to create algorithms for "Knowledge Tracing," the modeling of student knowledge over time. The goal is to accurately predict how students will perform on future interactions. You will pair your machine learning skills using Riiid’s EdNet data.
 
 - notebook:
+    - [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public)
     - [A self-Attentive model for Knowledge Tracing](https://www.kaggle.com/code/wangsg/a-self-attentive-model-for-knowledge-tracing/notebook)
     - [Riiid! SAKT Model - Training - Public](https://www.kaggle.com/code/manikanthr5/riiid-sakt-model-training-public)
 

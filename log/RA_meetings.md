@@ -9,10 +9,14 @@
     - [Simple and performant implementations of learner performance prediction algorithms](https://github.com/theophilegervet/learner-performance-prediction)
     - [jdxyw/deepKT](https://github.com/jdxyw/deepKT)
 - Look through Rasch model([Context-Aware Attentive Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3394486.3403282)) and Hawkes process ([Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM)) to add the forgetting mechanism 
+- Ablation Study, Heatmap (different algorithms, probability of ) 
+    - Example1:[MonaCoBert](https://github.com/codingchild2424/MonaCoBERT))
+    - Example2:[SAKT](https://arxiv.org/pdf/1907.06837.pdf)
+    - Example3:[Deep Graph Memory Networks for Forgetting-Robust Knowledge Tracing](https://arxiv.org/pdf/2108.08105.pdf): Graph will not needed in our experiment
 
 ## 12.7
 - Models to add before BERT:
-    - [Deep Graph Memory Networks for Forgetting-Robust Knowledge Tracing](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9891841&casa_token=XQitOqakP6YAAAAA:CwW96DselXHTS7CI9jE5ypYBspJ_rd-BU91ndt0oJxD0Jvg09JRAo-L7WLm5oHRDA3dUHsg&tag=1): AKT [8]: This model combines an attention model with Rasch model-based embeddings, which exponentially decays attention weights w.r.t. the distance of questions in a sequence in order to account for student’s forgetting effect.
+    - [Deep Graph Memory Networks for Forgetting-Robust Knowledge Tracing](https://arxiv.org/pdf/2108.08105.pdf): AKT [8]: This model combines an attention model with Rasch model-based embeddings, which exponentially decays attention weights w.r.t. the distance of questions in a sequence in order to account for student’s forgetting effect.
     - [Temporal Cross-Effects in Knowledge Tracing](https://dl.acm.org/doi/pdf/10.1145/3437963.3441802?casa_token=O7ucSempjVMAAAAA:wINOUz7ts87gTvSM57Xi5motZ9hApjn-vQAQQaupDF5xer8HBXQwMw78WE2JOXR_Ts9m0oAeaJM): HawkesKT [23]: This model uses the Hawkes process [26] to count for a student’s forgetting behavior.
 
 
