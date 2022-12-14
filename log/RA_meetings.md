@@ -1,6 +1,6 @@
 # Logs of meetings with Zhaoxing
 ## 12.13
-- For the SAKT model, it should calculate accuracy of predicting last value of output sequence. (Look through Kaggle code notebook to see how they calculate the acc, loss, and auc)
+- For the SAKT model, it should calculate accuracy of predicting last value of output sequence. (Look through Kaggle code notebook to see how they calculate the acc, loss, and auc) - big constrain: can only predict the 99th student response. 
 - Try to understand [MonaCoBert](https://github.com/codingchild2424/MonaCoBERT)
     - The inputs of the model?
     - The dataloader, dataset it used?
