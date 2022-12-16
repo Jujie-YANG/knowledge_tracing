@@ -87,3 +87,22 @@ Next, the method uses the `multi_att` layer to compute attention weights for eac
 
 The output of the attention layer is then passed through the `ffn` layer to generate a sequence of vectors representing the student's knowledge of each skill. Finally, the `pred` layer is applied to this sequence to make predictions about the student's knowledge of each skill. The method returns the predicted knowledge values and the attention weights computed by the `multi_att` layer.
 
+### Line by line explanation of HawkesKT inter cross effects
+```
+def forward(self, feed_dict):
+    skills = feed_dict['skill_seq']      # [batch_size, seq_len]
+    problems = feed_dict['problem_seq']  # [batch_size, seq_len]
+    times = feed_dict['time_seq']        # [batch_size, seq_len]
+    labels = feed_dict['label_seq']      # [batch_size, seq_len]
+```
+This code extracts the skill sequence, problem sequence, time sequence, and label sequence from the input feed dictionary. The skill sequence and problem sequence are 2D tensors of size [batch_size, seq_len], where batch_size is the number of sequences in the batch and seq_len is the length of each sequence. The time sequence is a 2D tensor of the same size, and the label sequence is a 2D tensor of binary values indicating whether each problem was answered correctly (1) or incorrectly (0).
+
+'''
+    mask_labels = labels * (labels > -1).long()
+    inters = skills + mask_labels * self.skill_num
+This code creates the intermediate skill sequence by masking the labels to only include the problems that were answered incorrectly, and then adding the skill_num to the corresponding skills in the skill sequence. The mask_labels tensor is created by setting all correct answers to 0 and all incorrect answers to 1, and then casting the resulting tensor to long type. The inters tensor is created by adding the skill_num to the skills in the skill sequence where the corresponding label in the mask_labels tensor is 1.
+'''
+Copy code
+    alpha_src_emb = self.alpha_inter_embeddings(inters)  # [bs, seq_len, emb]
+    alpha_target_emb = self.alpha_skill_embeddings(skills)
+    alphas = torch.matmul(alpha_src_emb, alpha_target
