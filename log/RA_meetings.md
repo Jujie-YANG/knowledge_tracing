@@ -1,6 +1,7 @@
 # Logs of meetings with Zhaoxing
 ## 12.16
 - [HawkesKT code](https://github.com/THUwangcy/HawkesKT)
+- [Google AI 2018 BERT pytorch implementation](https://github.com/codertimo/BERT-pytorch)
 
 ## 12.13
 - For the SAKT model, it should calculate accuracy of predicting last value of output sequence. (Look through Kaggle code notebook to see how they calculate the acc, loss, and auc)
