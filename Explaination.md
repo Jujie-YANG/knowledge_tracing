@@ -97,12 +97,50 @@ def forward(self, feed_dict):
 ```
 This code extracts the skill sequence, problem sequence, time sequence, and label sequence from the input feed dictionary. The skill sequence and problem sequence are 2D tensors of size [batch_size, seq_len], where batch_size is the number of sequences in the batch and seq_len is the length of each sequence. The time sequence is a 2D tensor of the same size, and the label sequence is a 2D tensor of binary values indicating whether each problem was answered correctly (1) or incorrectly (0).
 
-'''
+```
     mask_labels = labels * (labels > -1).long()
     inters = skills + mask_labels * self.skill_num
+```
 This code creates the intermediate skill sequence by masking the labels to only include the problems that were answered incorrectly, and then adding the skill_num to the corresponding skills in the skill sequence. The mask_labels tensor is created by setting all correct answers to 0 and all incorrect answers to 1, and then casting the resulting tensor to long type. The inters tensor is created by adding the skill_num to the skills in the skill sequence where the corresponding label in the mask_labels tensor is 1.
-'''
-Copy code
+
+```
     alpha_src_emb = self.alpha_inter_embeddings(inters)  # [bs, seq_len, emb]
     alpha_target_emb = self.alpha_skill_embeddings(skills)
     alphas = torch.matmul(alpha_src_emb, alpha_target
+    
+    beta_src_emb = self.beta_inter_embeddings(inters)  # [bs, seq_len, emb]
+    beta_target_emb = self.beta_skill_embeddings(skills)
+    betas = torch.matmul(beta_src_emb, beta_target_emb.transpose(-2, -1))  # [bs, seq_len, seq_len]
+    betas = torch.clamp(betas + 1, min=0, max=10)
+```
+This code calculates the embeddings for the intermediate skills and the current skills, and then uses these embeddings to calculate the coefficients alphas and betas. The alpha_src_emb tensor is created by passing the intermediate skills through the alpha_inter_embeddings layer, which is an embedding layer that maps the intermediate skills to a low-dimensional space. The alpha_target_emb tensor is created in a similar way using the alpha_skill_embeddings layer and the current skills. The alphas tensor is then calculated
+```
+    delta_t = (times[:, :, None] - times[:, None, :]).abs().double()
+    delta_t = torch.log(delta_t + 1e-10) / np.log(self.time_log)
+```
+This code calculates the time difference between each pair of problems in the sequence. The delta_t tensor is created by subtracting the time of each problem from the time of every other problem, and then taking the absolute value of the result. The resulting tensor has size [batch_size, seq_len, seq_len]. The delta_t tensor is then log-transformed and normalized by dividing by the log of the time_log parameter.
+
+```
+  cross_effects = alphas * torch.exp(-betas * delta_t)
+```
+This code calculates the cross-effects for each pair of problems in the sequence. The cross-effects are a measure of the influence of each skill on the prediction of the current problem. The cross_effects tensor is calculated by multiplying the alphas tensor (which captures the strength of the influence) by the exponential of the negative of the product of the betas tensor (which captures the decay of the influence over time) and the delta_t tensor (which captures the time difference between the two problems).
+
+```
+    seq_len = skills.shape[1]
+    valid_mask = np.triu(np.ones((1, seq_len, seq_len)), k=1)
+    mask = (torch.from_numpy(valid_mask) == 0)
+    mask = mask.cuda() if self.gpu != '' else mask
+    sum_t = cross_effects.masked_fill(mask, 0).sum(-2)
+```
+This code masks the upper triangle of the cross_effects tensor (including the diagonal) to zero and then sums the remaining elements along the last dimension. The resulting sum_t tensor has size [batch_size, seq_len] and represents the cumulative influence of all the previous problems on the prediction of the current problem.
+
+```
+    problem_bias = self.problem_base(problems).squeeze(dim=-1)
+    skill_bias = self.skill_base(skills).squeeze(dim=-1)
+```
+This code calculates the bias
+
+```
+    prediction = (problem_bias + skill_bias + sum_t).sigmoid()
+```
+This code calculates the final prediction for each problem in the sequence. The prediction tensor is calculated by adding the problem_bias tensor (which captures the bias for each problem), the skill_bias tensor (which captures the bias for each skill), and the sum_t tensor (which captures the cumulative influence of all the previous problems on the prediction of the current problem). The resulting tensor is then passed through the sigmoid function to squash the values between 0 and 1. The prediction tensor has size [batch_size, seq_len].
