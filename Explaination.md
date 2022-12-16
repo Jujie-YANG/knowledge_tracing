@@ -134,6 +134,16 @@ This code calculates the cross-effects for each pair of problems in the sequence
 ```
 This code masks the upper triangle of the cross_effects tensor (including the diagonal) to zero and then sums the remaining elements along the last dimension. The resulting sum_t tensor has size [batch_size, seq_len] and represents the cumulative influence of all the previous problems on the prediction of the current problem.
 
+The valid_mask is an array with the same shape as the cross_effects tensor, which is [batch_size, seq_len, seq_len]. The valid_mask array has all elements set to 1 except for the elements in the upper triangle of the array (including the diagonal), which are set to 0. The valid_mask array is used to mask the elements of the cross_effects tensor that correspond to the upper triangle of the array, setting them to zero.
+
+The sum_t tensor is a tensor of size [batch_size, seq_len] that represents the cumulative influence of all the previous problems on the prediction of the current problem. The sum_t tensor is created by summing the elements of the cross_effects tensor along the last dimension (i.e., summing over the second skill index). The mask tensor is created by converting the valid_mask array to a PyTorch tensor and then applying an element-wise comparison against zero. The masked_fill method is then used to set to zero all the elements of the cross_effects tensor that correspond to the upper triangle of the array (including the diagonal). Finally, the sum_t tensor is calculated by summing the remaining elements of the cross_effects tensor along the last dimension.
+
+The .sum(-2) operation is a tensor reduction operation that sums the elements of a tensor along a specified dimension. In this case, the .sum(-2) operation sums the elements of the cross_effects tensor along the second-to-last dimension, which has index -2.
+
+The result of the .sum(-2) operation is a tensor with the same shape as the cross_effects tensor, except that the second-to-last dimension has size 1. For example, if the cross_effects tensor has shape [batch_size, seq_len, seq_len], the resulting tensor will have shape [batch_size, seq_len, 1].
+
+The .sum(-2) operation is often used to reduce the size of a tensor by collapsing a specified dimension. For example, in this case the .sum(-2) operation is used to collapse the second-to-last dimension of the cross_effects tensor, summing all the elements along that dimension and creating a tensor with size [batch_size, seq_len].
+
 ```
     problem_bias = self.problem_base(problems).squeeze(dim=-1)
     skill_bias = self.skill_base(skills).squeeze(dim=-1)
