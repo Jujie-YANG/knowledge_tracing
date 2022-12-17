@@ -181,3 +181,14 @@ In this code, the betas tensor is being calculated by performing a matrix multip
 After the matrix multiplication, the resulting betas tensor will have size [batch_size, sequence_length, sequence_length], where each element of the tensor represents the "strength" of the relationship between the corresponding source and target skills.
 
 The betas tensor is then passed through the torch.clamp() function, which limits the values of the tensor to a certain range (in this case, the range [0, 10]). This is done to prevent the values of the betas tensor from becoming too large, which can cause problems when the tensor is used in further calculations.
+
+### What does the mask do? ```mask = (x > 0).unsqueeze(1).repeat(1, x.size(1), 1).unsqueeze(1)```
+In the code you provided, the mask tensor is being used to mask the attention computation in the transformer blocks. Attention mechanisms in transformer models compute a weighted sum of the values in a sequence, where the weights are based on the similarity between the query and each value in the sequence.
+
+The mask tensor is used to specify which values in the sequence should be ignored when computing the attention weights. This can be useful for masking out padded tokens in the sequence, which are added to the end of the sequence to ensure that all sequences in a batch have the same length. Padded tokens do not contribute to the meaning of the input, so they should be excluded from the attention computation.
+
+To create the mask tensor, the code first uses the > operator to create a boolean tensor indicating which elements in x are greater than zero. This boolean tensor has the same shape as x, with True values for the non-padded tokens and False values for the padded tokens.
+
+The unsqueeze function is then used to add singleton dimensions to the boolean tensor, resulting in a tensor of shape [batch_size, 1, seq_len]. The repeat function is used to repeat this tensor along the second dimension, resulting in a tensor of shape [batch_size, seq_len, seq_len]. Finally, the unsqueeze function is used again to add another singleton dimension to the tensor, resulting in a final shape of [batch_size, 1, seq_len, seq_len].
+
+When the mask tensor is used in the attention computation, the False values in the tensor will cause the attention weights for the padded tokens to be set to zero, effectively ignoring them in the attention computatio
