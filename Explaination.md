@@ -171,3 +171,13 @@ The None keyword is used to add a new singleton dimension to the times tensor, r
 The abs function is then applied to the resulting tensor to take the absolute value of the time differences, and the resulting tensor is converted to the double data type using the double function.
 
 Finally, the log function is applied to the resulting tensor, adding a small constant value 1e-10 to each element to avoid taking the log of 0, and the resulting tensor is divided by the logarithm of self.time_log, which is a hyperparameter that you can adjust to control the scale of the resulting tensor. The resulting delta_t tensor has shape (batch_size, sequence_length, sequence_length) and contains the logarithm of the absolute time differences between all pairs of events in the times tensor, scaled by the logarithm of self.time_log.
+
+```
+    betas = torch.matmul(beta_src_emb, beta_target_emb.transpose(-2, -1))  # [bs, seq_len, seq_len]
+    betas = torch.clamp(betas + 1, min=0, max=10)
+```
+In this code, the betas tensor is being calculated by performing a matrix multiplication between the beta_src_emb and beta_target_emb tensors. The beta_src_emb tensor represents the embeddings for the source (i.e., pre-requisite) skills, and the beta_target_emb tensor represents the embeddings for the target (i.e., current) skills. The matrix multiplication is performed using the .transpose() method, which rearranges the dimensions of the beta_target_emb tensor such that the second and third dimensions are switched.
+
+After the matrix multiplication, the resulting betas tensor will have size [batch_size, sequence_length, sequence_length], where each element of the tensor represents the "strength" of the relationship between the corresponding source and target skills.
+
+The betas tensor is then passed through the torch.clamp() function, which limits the values of the tensor to a certain range (in this case, the range [0, 10]). This is done to prevent the values of the betas tensor from becoming too large, which can cause problems when the tensor is used in further calculations.
