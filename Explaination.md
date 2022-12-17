@@ -154,3 +154,5 @@ This code calculates the bias
     prediction = (problem_bias + skill_bias + sum_t).sigmoid()
 ```
 This code calculates the final prediction for each problem in the sequence. The prediction tensor is calculated by adding the problem_bias tensor (which captures the bias for each problem), the skill_bias tensor (which captures the bias for each skill), and the sum_t tensor (which captures the cumulative influence of all the previous problems on the prediction of the current problem). The resulting tensor is then passed through the sigmoid function to squash the values between 0 and 1. The prediction tensor has size [batch_size, seq_len].
+
+sum_t: [64, 99]; x.embedding: [64, 99, 128] seq_len:99
