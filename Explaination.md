@@ -155,4 +155,19 @@ This code calculates the bias
 ```
 This code calculates the final prediction for each problem in the sequence. The prediction tensor is calculated by adding the problem_bias tensor (which captures the bias for each problem), the skill_bias tensor (which captures the bias for each skill), and the sum_t tensor (which captures the cumulative influence of all the previous problems on the prediction of the current problem). The resulting tensor is then passed through the sigmoid function to squash the values between 0 and 1. The prediction tensor has size [batch_size, seq_len].
 
-sum_t: [64, 99]; x.embedding: [64, 99, 128] seq_len:99
+sum_t: [64, 99]; x.embedding: [64, 99, 128] seq_len:99, delta_t:[64, 99, 99
+
+### None value issue
+```
+    delta_t = (times[:, :, None] - times[:, None, :]).abs().double()
+    delta_t = torch.log(delta_t + 1e-10) / np.log(self.time_log)
+```
+Yes, that is correct. The delta_t tensor is created by subtracting the time of each problem from the time of every other problem in the sequence, taking the absolute value of the result, and then log-transforming and normalizing the resulting tensor.
+
+The times tensor is a 2D tensor with shape (batch_size, sequence_length), where batch_size is the number of time sequences in the batch and sequence_length is the length of each time sequence. The value at position (i, j) in the times tensor represents the time of the j-th event in the i-th time sequence in the batch.
+
+The None keyword is used to add a new singleton dimension to the times tensor, resulting in a 3D tensor with shape (batch_size, sequence_length, 1). This allows the subtraction operation to be broadcast across the sequence_length dimensions, resulting in a 3D tensor with shape (batch_size, sequence_length, sequence_length) containing the time differences between all pairs of events in the times tensor.
+
+The abs function is then applied to the resulting tensor to take the absolute value of the time differences, and the resulting tensor is converted to the double data type using the double function.
+
+Finally, the log function is applied to the resulting tensor, adding a small constant value 1e-10 to each element to avoid taking the log of 0, and the resulting tensor is divided by the logarithm of self.time_log, which is a hyperparameter that you can adjust to control the scale of the resulting tensor. The resulting delta_t tensor has shape (batch_size, sequence_length, sequence_length) and contains the logarithm of the absolute time differences between all pairs of events in the times tensor, scaled by the logarithm of self.time_log.
