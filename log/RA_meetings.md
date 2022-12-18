@@ -1,4 +1,7 @@
 # Logs of meetings with Zhaoxing
+## 12.18
+- Find other techniques that are added to DKT(transformers)
+
 ## 12.16
 - [HawkesKT code](https://github.com/THUwangcy/HawkesKT)
 - [Google AI 2018 BERT pytorch implementation](https://github.com/codertimo/BERT-pytorch)
