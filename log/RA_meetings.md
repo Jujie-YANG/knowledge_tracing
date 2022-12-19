@@ -1,6 +1,16 @@
 # Logs of meetings with Zhaoxing
 ## 12.18
 - Find other techniques that are added to DKT(transformers)
+    - [Code: SAINT PyTorch implementation](https://github.com/arshadshk/SAINT-pytorch) - [Paper: Towards an Appropriate Query, Key, and Value Computation for Knowledge Tracing](https://arxiv.org/pdf/2002.07033.pdf) 
+    - [Code: Implementation of SAINT+: Integrating Temporal Features for EdNet Correctness Prediction](https://github.com/Shivanandmn/SAINT_plus-Knowledge-Tracing-) - [PaperWithCode:SAINT/SAINT+](https://paperswithcode.com/paper/towards-an-appropriate-query-key-and-value)
+    - [Code: DSAKT](https://github.com/Fusion4233919/DSAKT) - [PaperWithCode](https://paperswithcode.com/paper/application-of-deep-self-attention-in): Same achitecture as SAINT
+    - [Context-Aware Attentive Knowledge Tracing](https://paperswithcode.com/paper/context-aware-attentive-knowledge-tracing): AKT uses a novel monotonic attention mechanism that relates a learner’s future responses to assessment questions to their past responses; attention weights are computed using exponential decay and a context-aware relative distance measure, in addition to the similarity between questions. Moreover, we use the Rasch model to regularize the concept and question embeddings; these embeddings are able to capture individual differences among questions on the same concept without using an excessive number of parameters
+    - [Last Query Transformer RNN for knowledge tracing](https://paperswithcode.com/paper/last-query-transformer-rnn-for-knowledge)
+
+There are several different approaches to knowledge tracing, and the specific type of embedding that you use may depend on the specific needs of your application. Some common options for creating embeddings for knowledge tracing include:
+1. Latent variable models: These models represent knowledge as a latent (hidden) variable that can be inferred from student responses to a series of items or questions. Examples of latent variable models include the Rasch model, which I mentioned earlier, as well as other models such as the item response theory (IRT) model.
+2. Neural network models: These models use artificial neural networks to learn representations of knowledge from student responses to a series of items or questions. One popular approach is to use a recurrent neural network (RNN) to model the temporal dynamics of student learning.
+3. Matrix factorization techniques: These techniques factorize a matrix of student responses into a low-dimensional representation, which can be used to identify patterns in the data and make predictions about future student performance. Examples of matrix factorization techniques include singular value decomposition (SVD) and non-negative matrix factorization (NMF).
 
 ## 12.16
 - [HawkesKT code](https://github.com/THUwangcy/HawkesKT)
