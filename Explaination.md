@@ -192,3 +192,6 @@ To create the mask tensor, the code first uses the > operator to create a boolea
 The unsqueeze function is then used to add singleton dimensions to the boolean tensor, resulting in a tensor of shape [batch_size, 1, seq_len]. The repeat function is used to repeat this tensor along the second dimension, resulting in a tensor of shape [batch_size, seq_len, seq_len]. Finally, the unsqueeze function is used again to add another singleton dimension to the tensor, resulting in a final shape of [batch_size, 1, seq_len, seq_len].
 
 When the mask tensor is used in the attention computation, the False values in the tensor will cause the attention weights for the padded tokens to be set to zero, effectively ignoring them in the attention computation.
+
+### What's the difference between using proj_size=1 and nn.linear output size =1
+The main difference between proj_size=1 and nn.Linear output size 1 is that proj_size=1 applies a linear transformation to the input data in the context of an attention mechanism, while nn.Linear output size 1 applies a linear transformation to the input data in the context of a neural network.
