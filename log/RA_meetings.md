@@ -1,4 +1,9 @@
 # Logs of meetings with Zhaoxing
+## 12.20
+- LSTM+RNN: One of the benefits of using an LSTM RNN for explainable knowledge tracing is that it is able to take into account the temporal dependencies in the data, meaning that it can consider not just the current state of the student's knowledge, but also how their knowledge has evolved over time. This can help to provide a more nuanced and accurate prediction of the student's knowledge.
+- Rasch-model based embedding
+- Forgetting mechanism
+
 ## 12.18
 - Find other techniques that are added to DKT(transformers)
     - [Code: SAINT PyTorch implementation](https://github.com/arshadshk/SAINT-pytorch) - [Paper: Towards an Appropriate Query, Key, and Value Computation for Knowledge Tracing](https://arxiv.org/pdf/2002.07033.pdf) 
