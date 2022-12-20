@@ -1,8 +1,15 @@
 # Logs of meetings with Zhaoxing
 ## 12.20
-- LSTM+RNN: One of the benefits of using an LSTM RNN for explainable knowledge tracing is that it is able to take into account the temporal dependencies in the data, meaning that it can consider not just the current state of the student's knowledge, but also how their knowledge has evolved over time. This can help to provide a more nuanced and accurate prediction of the student's knowledge.
+- LSTM for EKT: One of the benefits of using an LSTM RNN for explainable knowledge tracing is that it is able to take into account the temporal dependencies in the data, meaning that it can consider not just the current state of the student's knowledge, but also how their knowledge has evolved over time. This can help to provide a more nuanced and accurate prediction of the student's knowledge.
 - Rasch-model based embedding
 - Forgetting mechanism
+- RNN vs BERT: Recurrent neural networks (RNNs) and BERT (Bidirectional Encoder Representations from Transformers) are both types of neural network architectures that can be used for knowledge tracing, but they differ in their specific capabilities and the types of tasks they are best suited for.
+
+RNNs, including LSTM (Long Short-Term Memory) RNNs, are particularly well-suited for modeling sequential data and predicting the next item in a sequence based on the items that come before it. This makes them well-suited for tasks such as language modeling, where the goal is to predict the next word in a sentence based on the words that come before it. In the context of knowledge tracing, an RNN could be used to predict a student's knowledge of a particular subject based on their previous interactions with learning materials.
+
+BERT, on the other hand, is a type of transformer-based language model that is particularly well-suited for natural language processing tasks, such as language understanding and machine translation. BERT uses a technique called self-attention to analyze the relationships between words in a sentence, allowing it to better understand the meaning of the sentence as a whole. BERT can be fine-tuned for specific tasks, such as question answering or text classification, by training it on a large dataset of labeled examples for the task.
+
+In general, RNNs are better suited for tasks involving sequential data, while BERT is better suited for tasks involving natural language processing. The best approach for a given knowledge tracing task will depend on the specific needs and constraints of the problem at hand.
 
 ## 12.18
 - Find other techniques that are added to DKT(transformers)
