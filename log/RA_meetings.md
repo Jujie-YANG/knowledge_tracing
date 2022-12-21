@@ -1,5 +1,8 @@
 # Logs of meetings with Zhaoxing
 ## 12.20
+- Paper points:
+    1. Why LSTM not other RNN models: Memory? Recent Importance.
+    2. Longer Sequence: voca_size -> 2 (Last query+RNN particular subject based on their previous interactions)
 - LSTM for EKT: One of the benefits of using an LSTM RNN for explainable knowledge tracing is that it is able to take into account the temporal dependencies in the data, meaning that it can consider not just the current state of the student's knowledge, but also how their knowledge has evolved over time. This can help to provide a more nuanced and accurate prediction of the student's knowledge.
 - Rasch-model based embedding
 - Forgetting mechanism
