@@ -1,2 +1,3 @@
-Note that IRT Rasch embedding differs from AKT Rasch embedding because the condition of IRT assumes that the knowledge state of the student is fixed and does not change when estimated. -- shorter sequence
-RNN + last query -- longer sequence
+- Ideas:
+  - Note that IRT Rasch embedding differs from AKT Rasch embedding because the condition of IRT assumes that the knowledge state of the student is fixed and does not change when estimated. -- shorter sequence
+  - RNN + last query -- longer sequence
