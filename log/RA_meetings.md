@@ -1,4 +1,7 @@
 # Logs of meetings with Zhaoxing
+## 12.21
+- Heapmap
+- MonaCoBERT discussion evaluation diagrams
 ## 12.20
 - Paper points: (What to do tomorrow)
     1. Add Rasch embedding to BERT [Example code using Rasch model based embedding](https://github.com/codingchild2424/BiDKT/tree/7ff8f6703d94f2eba3e0e4c5000eeafcd82a23d5)
