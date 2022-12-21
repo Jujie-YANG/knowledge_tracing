@@ -1,7 +1,7 @@
 # Logs of meetings with Zhaoxing
 ## 12.20
 - Paper points: (What to do tomorrow)
-    1. Add Rasch embedding to BERT
+    1. Add Rasch embedding to BERT [Example code using Rasch model based embedding](https://github.com/codingchild2424/BiDKT/tree/7ff8f6703d94f2eba3e0e4c5000eeafcd82a23d5)
     2. Why LSTM not other RNN models: Memory? Recent Importance.
     3. Longer Sequence: voca_size -> 2 (Last query+RNN particular subject based on their previous interactions)
     4. Distinguish qkv positional embedding
