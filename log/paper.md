@@ -28,7 +28,7 @@
     - Max sequence length: 100
     - Attention head: 8
     - Hidden size: BERT: 128, FFN: 4 * 128 = 512, RNN: 128
-    - Transformer Block: 12
+    - Transformer Block/Encoder Layer: 12
     <!-- - Activation function: GELU (Gaussian Error Linear Unit) -->
 
 
