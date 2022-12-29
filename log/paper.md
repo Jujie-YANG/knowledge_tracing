@@ -82,7 +82,7 @@
     |      >100      |         |     |           |             |                   |
     |                 |         |     |           |             |                   |
 
-  - Example performance table:
+  - Example performance table from which paper?:
 
     <!-- Table -->
-    ![Example performance table from ?wechat](../src/img/example_performance_table.jpeg)
+    ![Example performance table](../src/img/example_performance_table.jpeg)
