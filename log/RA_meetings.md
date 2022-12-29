@@ -1,4 +1,9 @@
 # Logs of meetings with Zhaoxing
+## 12.29
+- Hyperparameters for Experiments
+- heatmap: attention weights OR mutual information (IKT with Rasch embeddings)
+- TSNE: IKT how to interprete (Rasch: more dispersed)
+
 ## 12.28
 - [Code: KT-BERT](https://github.com/codingchild2424/BiDKT/tree/7ff8f6703d94f2eba3e0e4c5000eeafcd82a23d5): Rasch
 - [Paper: Efficient Attentive Knowledge Tracing for
